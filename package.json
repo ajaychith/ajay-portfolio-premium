@@ -1,0 +1,46 @@
+{
+  "name": "ajay-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "server": "node server/index.js",
+    "start:all": "concurrently \"node server/index.js\" \"npm run dev\""
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.1",
+    "@tailwindcss/vite": "^4.3.0",
+    "axios": "^1.20.0",
+    "concurrently": "^10.0.6",
+    "framer-motion": "^12.43.0",
+    "gsap": "^3.15.0",
+    "lucide-react": "^1.57.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-icons": "^5.6.0",
+    "tailwindcss": "^4.3.0",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "vite": "^8.0.12"
+  },
+  "description": "A premium React/Vite portfolio rebuilt around a lightweight 3D interaction system, responsive glass-depth UI, accessible motion fallbacks, and Vercel-friendly performance.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
