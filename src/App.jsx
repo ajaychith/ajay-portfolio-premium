@@ -148,6 +148,12 @@ export default function App() {
           {vis.skills && <button onClick={() => navTo('home', 'skills')}>Skills</button>}
           {vis.workflow && <button onClick={() => navTo('home', 'workflow')}>Workflow</button>}
           {vis.contact && <button onClick={() => navTo('home', 'contact')}>Contact</button>}
+          {s.resume_url && (
+            <a href={s.resume_url} target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
+              <SvgIcon name="FileText" size={14} />
+              <span>Resume</span>
+            </a>
+          )}
           <button
             onClick={() => setCurrentPage('admin')}
             style={{ color: 'var(--orange)', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 6 }}
@@ -178,6 +184,12 @@ export default function App() {
           <button onClick={() => navTo('home', 'skills')}>Technical Skills</button>
           <button onClick={() => navTo('home', 'workflow')}>Workflow Sprint</button>
           <button onClick={() => navTo('home', 'contact')}>Contact Consultation</button>
+          {s.resume_url && (
+            <a href={s.resume_url} target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.08)', color: '#fff', textDecoration: 'none', fontWeight: 600, fontSize: 16 }}>
+              <SvgIcon name="FileText" size={16} />
+              <span>View Resume PDF</span>
+            </a>
+          )}
           <button onClick={() => { setMobileMenuOpen(false); setCurrentPage('admin'); }} style={{ color: 'var(--orange)', display: 'flex', alignItems: 'center', gap: 8 }}>
             <SvgIcon name="Sliders" size={16} />
             <span>Open Admin CMS</span>
@@ -192,7 +204,7 @@ export default function App() {
     const snaps = selectedProject.snapshots?.length ? selectedProject.snapshots : [selectedProject.image_url || '/project1.jpg'];
     const projSkills = selectedProject.project_skills?.length
       ? selectedProject.project_skills
-      : (selectedProject.tech_stack || '').split('•').map((s) => s.trim()).filter(Boolean);
+      : (selectedProject.tech_stack || '').split('â€¢').map((s) => s.trim()).filter(Boolean);
 
     return (
       <div className="projects-page-wrap">
@@ -203,14 +215,14 @@ export default function App() {
             className="cms-secondary-btn"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 28 }}
           >
-            <span>← Back to All Projects</span>
+            <span>â† Back to All Projects</span>
           </button>
 
           <div className="behind-grid" style={{ marginBottom: 36 }}>
             <div>
               <div className="section-orange-tag" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
                 <SvgIcon name="Layers" size={14} />
-                <span>{selectedProject.client || 'CASE STUDY'} • {selectedProject.timeline || '2026'}</span>
+                <span>{selectedProject.client || 'CASE STUDY'} â€¢ {selectedProject.timeline || '2026'}</span>
               </div>
               <h1 className="fb-h2" style={{ fontSize: 'clamp(2.2rem, 4.8vw, 4.2rem)' }}>{selectedProject.title}</h1>
             </div>
@@ -733,8 +745,8 @@ export default function App() {
             </div>
           </div>
           <div style={{ paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, fontSize: 12.5, color: '#64748b' }}>
-            <span>© {new Date().getFullYear()} {s.name}. All rights reserved.</span>
-            <span onClick={() => navTo('home')} style={{ color: '#cbd5e1', cursor: 'pointer' }}>Back to top ↑</span>
+            <span>Â© {new Date().getFullYear()} {s.name}. All rights reserved.</span>
+            <span onClick={() => navTo('home')} style={{ color: '#cbd5e1', cursor: 'pointer' }}>Back to top â†‘</span>
           </div>
         </footer>
       </main>
