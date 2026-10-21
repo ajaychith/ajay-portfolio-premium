@@ -63,9 +63,17 @@ export default function AdminCMS({ cmsState, onSaveState, onBackToSite }) {
           notify('Uploaded & saved permanently: ' + res.data.url);
         }
       } catch (err) {
-        // Fallback to DataURL if static host
-        onComplete(reader.result, draft);
-        notify('File loaded into state!');
+        // Fallback: Add base64 image directly to visual grid if API fails
+        const newMedia = {
+          id: Date.now(),
+          name: file.name,
+          url: reader.result,
+          type: file.type?.startsWith('video') ? 'video' : 'image'
+        };
+        const nextMedia = [newMedia, ...(draft.media || [])];
+        const nextDraft = { ...draft, media: nextMedia };
+        setDraft(nextDraft);
+        onComplete(reader.result, nextDraft);
       } finally {
         setUploading(false);
       }
@@ -232,7 +240,7 @@ export default function AdminCMS({ cmsState, onSaveState, onBackToSite }) {
                   <SvgIcon name="Box" size={18} color="#ff5522" />
                 </div>
                 <strong>{draft.projects.length}</strong>
-                <small>Edit Snapshots & Project Skills →</small>
+                <small>Edit Snapshots & Project Skills â†’</small>
               </div>
               <div className="cms-kpi-card" onClick={() => setActiveTab('media')}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -240,7 +248,7 @@ export default function AdminCMS({ cmsState, onSaveState, onBackToSite }) {
                   <SvgIcon name="Image" size={18} color="#ff5522" />
                 </div>
                 <strong>{(draft.media || []).length}</strong>
-                <small>Upload Images & Videos →</small>
+                <small>Upload Images & Videos â†’</small>
               </div>
               <div className="cms-kpi-card" onClick={() => setActiveTab('skills')}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -248,7 +256,7 @@ export default function AdminCMS({ cmsState, onSaveState, onBackToSite }) {
                   <SvgIcon name="Cpu" size={18} color="#ff5522" />
                 </div>
                 <strong>{draft.skills.length}</strong>
-                <small>80+ Real SVG Icons →</small>
+                <small>80+ Real SVG Icons â†’</small>
               </div>
               <div className="cms-kpi-card" onClick={() => setActiveTab('messages')}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -256,7 +264,7 @@ export default function AdminCMS({ cmsState, onSaveState, onBackToSite }) {
                   <SvgIcon name="Mail" size={18} color="#ff5522" />
                 </div>
                 <strong style={{ color: '#ff5522' }}>{draft.messages?.length || 0}</strong>
-                <small>View Consultation Inbox →</small>
+                <small>View Consultation Inbox â†’</small>
               </div>
             </div>
 
@@ -612,7 +620,7 @@ export default function AdminCMS({ cmsState, onSaveState, onBackToSite }) {
               </div>
 
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '24px 0 12px' }}>
-                <h4>Animated Sequential Hero Strip Items (#01 → #02 → #03 → #04)</h4>
+                <h4>Animated Sequential Hero Strip Items (#01 â†’ #02 â†’ #03 â†’ #04)</h4>
                 <button
                   type="button"
                   onClick={() => {
@@ -732,8 +740,8 @@ export default function AdminCMS({ cmsState, onSaveState, onBackToSite }) {
                     description: 'Executive summary of the project...',
                     challenge: 'Key technical challenge solved...',
                     solution: 'Architecture and implementation details...',
-                    metrics: '99.9% Uptime • 2x Performance',
-                    tech_stack: 'React • Node.js • Cybersecurity',
+                    metrics: '99.9% Uptime â€¢ 2x Performance',
+                    tech_stack: 'React â€¢ Node.js â€¢ Cybersecurity',
                     project_skills: ['React.js', 'Cybersecurity', 'DNS Management'],
                     image_url: '/project1.jpg',
                     snapshots: ['/project1.jpg', '/project2.jpg'],
@@ -800,7 +808,7 @@ export default function AdminCMS({ cmsState, onSaveState, onBackToSite }) {
 
                   {/* PER-PROJECT SKILLS TAGS EDITOR */}
                   <div className="cms-field" style={{ gridColumn: '1 / -1' }}>
-                    <label>PROJECT-SPECIFIC SKILLS & TECHNOLOGIES (COMMA SEPARATED — SHOWN ON DETAIL PAGE)</label>
+                    <label>PROJECT-SPECIFIC SKILLS & TECHNOLOGIES (COMMA SEPARATED â€” SHOWN ON DETAIL PAGE)</label>
                     <input
                       value={(proj.project_skills || []).join(', ')}
                       onChange={(e) => {
@@ -953,7 +961,7 @@ export default function AdminCMS({ cmsState, onSaveState, onBackToSite }) {
           <div className="cms-card">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
               <h3 style={{ color: '#ff5522' }}>Professional Experience Timeline</h3>
-              <button type="button" onClick={() => addListItem('experiences', { role: 'Role Title', company: 'Organization', duration: '2025 — Present', description: 'Key responsibilities...' })} className="orange-cta-pill">
+              <button type="button" onClick={() => addListItem('experiences', { role: 'Role Title', company: 'Organization', duration: '2025 â€” Present', description: 'Key responsibilities...' })} className="orange-cta-pill">
                 <SvgIcon name="Plus" size={15} /><span>Add Experience</span>
               </button>
             </div>
