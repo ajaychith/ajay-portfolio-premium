@@ -60,7 +60,7 @@ export const defaultCMSState = {
   },
   sections: {
     hero: {
-      eyebrow: "Hello, I'm Ajay —",
+      eyebrow: "Hello, I'm Ajay â€”",
       title_line1: "Cybersecurity",
       title_line2: "& Web Architect",
       right_heading: "Securing infrastructure & building modern web solutions.",
@@ -92,7 +92,7 @@ export const defaultCMSState = {
     workflow: {
       tag: "EXECUTION WORKFLOW",
       heading: "A structured engineering sprint from security audit to live deployment.",
-      description: "Every project follows a disciplined lifecycle — from infrastructure and vulnerability assessment to UI architecture, DNS/hosting configuration, and automated deployment.",
+      description: "Every project follows a disciplined lifecycle â€” from infrastructure and vulnerability assessment to UI architecture, DNS/hosting configuration, and automated deployment.",
       steps: [
         { id: 1, label: "Infrastructure & Security Audit", days: "1 day", offset: "0", icon: "Shield", enabled: true },
         { id: 2, label: "System Architecture & DNS Planning", days: "1 day", offset: "10", icon: "Server", enabled: true },
@@ -143,13 +143,13 @@ export const defaultCMSState = {
       id: 1,
       title: "Kanopy Diagnostics Digital & Infrastructure Management",
       client: "Kanopy Diagnostics",
-      timeline: "August 2026 — Present",
+      timeline: "August 2026 â€” Present",
       role: "IT Executive",
       description: "Managing website infrastructure, hosting environments, domains, DNS management, technical support, cybersecurity practices, and SEO initiatives for business-critical healthcare services.",
       challenge: "Ensuring high availability, fast page loads, secure domain/DNS routing, and zero downtime across patient-facing diagnostic portals and internal digital systems.",
       solution: "Implemented structured hosting management, proactive DNS monitoring, cybersecurity hardening, and AI-assisted operational workflows to streamline technical support and SEO performance.",
-      metrics: "99.9% Uptime • Hardened DNS & SSL • Improved Organic SEO Visibility",
-      tech_stack: "WordPress • DNS • Hosting • Cybersecurity • SEO",
+      metrics: "99.9% Uptime â€¢ Hardened DNS & SSL â€¢ Improved Organic SEO Visibility",
+      tech_stack: "WordPress â€¢ DNS â€¢ Hosting â€¢ Cybersecurity â€¢ SEO",
       project_skills: ["WordPress Admin", "DNS Management", "Web Hosting", "Cybersecurity", "Technical Support", "SEO Optimization"],
       image_url: "/project1.jpg",
       snapshots: ["/project1.jpg", "/project2.jpg", "/project3.jpg"],
@@ -161,13 +161,13 @@ export const defaultCMSState = {
       id: 2,
       title: "Uma Diagnostics Website & LIMS Platform",
       client: "Uma Diagnostics",
-      timeline: "December 2025 — July 2026",
+      timeline: "December 2025 â€” July 2026",
       role: "IT Lead",
       description: "Led website development, WordPress administration, hosting infrastructure, DNS/email systems, and custom LIMS web application workflows.",
       challenge: "Modernizing legacy diagnostic workflows and unifying website administration, domain/email reliability, and laboratory information management.",
       solution: "Developed modern LIMS web modules using AI-assisted development and automation workflows while securing WordPress hosting, domains, and DNS infrastructure.",
-      metrics: "End-to-End LIMS Automation • Zero Email/DNS Spoofing • Full Digital Transformation",
-      tech_stack: "React • WordPress • AI-Assisted Dev • SQL • DNS",
+      metrics: "End-to-End LIMS Automation â€¢ Zero Email/DNS Spoofing â€¢ Full Digital Transformation",
+      tech_stack: "React â€¢ WordPress â€¢ AI-Assisted Dev â€¢ SQL â€¢ DNS",
       project_skills: ["React.js", "WordPress", "LIMS Development", "SQL", "DNS & Email Admin", "Cybersecurity"],
       image_url: "/project2.jpg",
       snapshots: ["/project2.jpg", "/project1.jpg", "/project4.jpg"],
@@ -184,8 +184,8 @@ export const defaultCMSState = {
       description: "Designed and engineered a full-width 3D/video portfolio with a unified Node.js + MySQL + JSON Headless CMS, real-time theme engine, and permanent media uploader.",
       challenge: "Building an Awwwards-grade interactive portfolio where every single section, project snapshot, icon, and theme variable is editable live without touching code.",
       solution: "Combined React, Vite, custom API middleware, 80+ vector SVG icons, and an executive CMS with live project case-study modals and media management.",
-      metrics: "100% Editable A-Z CMS • 60fps Scroll Animations • Instant Media Uploads",
-      tech_stack: "React • Vite • Node.js • CSS3 • AI Workflows",
+      metrics: "100% Editable A-Z CMS â€¢ 60fps Scroll Animations â€¢ Instant Media Uploads",
+      tech_stack: "React â€¢ Vite â€¢ Node.js â€¢ CSS3 â€¢ AI Workflows",
       project_skills: ["React.js", "Vite", "Node.js", "JavaScript", "CSS3", "REST APIs", "Git & GitHub"],
       image_url: "/project3.jpg",
       snapshots: ["/project3.jpg", "/project4.jpg", "/project1.jpg"],
@@ -205,10 +205,10 @@ export const defaultCMSState = {
     { id: 8, name: "SAP HANA, CRM & IT Ops", category: "Enterprise Systems", proficiency: 89, icon: "Cpu", enabled: true }
   ],
   experiences: [
-    { id: 1, role: "IT Executive", company: "Kanopy Diagnostics", duration: "August 2026 — Present", description: "Supporting day-to-day technology operations across digital systems, website infrastructure, hosting environments, DNS, cybersecurity practices, technical support, and SEO initiatives.", enabled: true },
-    { id: 2, role: "IT Lead", company: "Uma Diagnostics", duration: "December 2025 — July 2026", description: "Led website development, WordPress administration, hosting, domains, DNS, email systems, and developed LIMS web applications using AI-assisted workflows.", enabled: true },
-    { id: 3, role: "AMC Executive", company: "Daikin Air-Conditioning India Pvt. Ltd.", duration: "November 2024 — May 2025", description: "Managed AMC lifecycle, customer service operations, SAP HANA and CRM records, technician schedules, and operational reporting.", enabled: true },
-    { id: 4, role: "Logistics Supervisor", company: "FreshToHome", duration: "May 2023 — September 2025", description: "Managed inventory operations, dispatch readiness, operational teams, and process-improvement initiatives.", enabled: true }
+    { id: 1, role: "IT Executive", company: "Kanopy Diagnostics", duration: "August 2026 â€” Present", description: "Supporting day-to-day technology operations across digital systems, website infrastructure, hosting environments, DNS, cybersecurity practices, technical support, and SEO initiatives.", enabled: true },
+    { id: 2, role: "IT Lead", company: "Uma Diagnostics", duration: "December 2025 â€” July 2026", description: "Led website development, WordPress administration, hosting, domains, DNS, email systems, and developed LIMS web applications using AI-assisted workflows.", enabled: true },
+    { id: 3, role: "AMC Executive", company: "Daikin Air-Conditioning India Pvt. Ltd.", duration: "November 2024 â€” May 2025", description: "Managed AMC lifecycle, customer service operations, SAP HANA and CRM records, technician schedules, and operational reporting.", enabled: true },
+    { id: 4, role: "Logistics Supervisor", company: "FreshToHome", duration: "May 2023 â€” September 2025", description: "Managed inventory operations, dispatch readiness, operational teams, and process-improvement initiatives.", enabled: true }
   ],
   services: [
     { id: 1, title: "Cybersecurity & Vulnerability Assessment", description: "SIEM monitoring, risk management, network security hardening, and operational security audits.", icon: "ShieldCheck", enabled: true },
