@@ -3,5 +3,4 @@ dist/
 .env
 server/.env
 server/cms_database.json
-public/uploads/
 .DS_Store
